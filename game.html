@@ -42,18 +42,48 @@
             </ul>
           </div>
         </nav>
-        
+
         <div id="gameframe">
-            <p id="question">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p id="question">Question 1</p>
             <button id="one">Decision 1</button>
             <button id="two">Decision 2</button>
+            <br>
+            <br>
+            <button id="restart">Start over</button>
         </div>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
         <script type="text/javascript">
+            var question = ['Question 1', 'Question 2', 'Question 3'];
+            
+            $("#question").text(question[0]);
+            
+            $("#one").click(function() {
+                
+                $("#question").text(question[1]);
+                
+            });
+            
+            $("#two").click(function() {
+                
+                $("#question").text(question[2]);
+                
+            });
+            
+            $("#restart").click(function() {
+                
+                location.href = "index.html";
+                
+            });
             
         </script>
         
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        
+        
         
     </body>
 
