@@ -1,3 +1,65 @@
+<!-- <?php
+
+    $error = ""; $successMessage = "";
+
+    if ($_POST) {
+        
+        if (!$_POST["email"]) {
+            
+            $error .= "An email address is required.<br>";
+            
+        }
+        
+        if (!$_POST["content"]) {
+            
+            $error .= "The content field is required.<br>";
+            
+        }
+        
+        if (!$_POST["subject"]) {
+            
+            $error .= "The subject is required.<br>";
+            
+        }
+        
+        if ($_POST['email'] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {
+            
+            $error .= "The email address is invalid.<br>";
+            
+        }
+        
+        if ($error != "") {
+            
+            $error = '<div class="alert alert-danger" role="alert"><p>There were error(s) in your form:</p>' . $error . '</div>';
+            
+        } else {
+            
+            $emailTo = "vhuang19@siprep.org";
+            
+            $subject = $_POST['subject'];
+            
+            $content = $_POST['content'];
+            
+            $headers = "From: ".$_POST['email'];
+            
+            if (mail($emailTo, $subject, $content, $headers)) {
+                
+                $successMessage = '<div class="alert alert-success" role="alert">Your message was sent, we\'ll get back to you ASAP!</div>';
+                
+                
+            } else {
+                
+                $error = '<div class="alert alert-danger" role="alert"><p><strong>Your message couldn\'t be sent - please try again later</div>';
+                
+                
+            }
+            
+        }
+           
+    }
+
+?>
+-->
 <html>
 
     <head>
@@ -30,6 +92,78 @@
           </div>
         </nav>
         
+        <div class="container">
+
+    <h1>Contact Us!</h1>
+	
+	<!--<div id="error"><? echo $error.$successMessage; ?></div>-->
+
+	
+
+<form method="post">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email"aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" class="form-control" id="subject" name="subject">
+  </div>
+<div class="form-group">
+    <label for="content">What do you want to tell us?</label>
+    <textarea class="form-control" id="content" name="content" rows="5"></textarea>
+  </div>
+  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+</form> 
+
+    </div>  
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+    <script type="text/javascript">
+  
+	$("form").submit(function(e) {
+		
+		
+		var error = "";
+		
+		if ($("#email").val() == "") {
+			
+			error += "<p>The email field is required"</p>;
+		}		
+		
+		if ($("#subject").val() == "") {
+			
+			error += "<p>The subject field is required"</p>;
+		}		
+		
+		$("error").html(error);
+		
+		if ($("#content").val() == "") {
+			
+			error += "<p>The content field is required"</p>;
+		}		
+
+		if (error != "") {
+			$("error").html('<div class="alert alert-danger" role="alert">
+			<p>There were errors in your form.</p>'
+		'</div>');
+		
+			return false;
+		} else {
+			return true;
+		}
+		
+	    
+		
+	}); 
+    
+    </script>    
+        
     </body>
     
 </html>
+
