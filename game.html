@@ -5,12 +5,19 @@
         <style type="text/css">
         
             #gameframe {
-                padding: 20px;
+                padding: 10px;
                 background-color: aliceblue;
                 height: 1000px;
-                width: 100%;
+                
                 border: solid 3px;
-                margin-top: 20px;
+                margin-top: 2%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            
+            #border {
+                background-image: url("https://cdn.pixabay.com/photo/2017/06/10/13/44/white-2389902_960_720.jpg");
+                background-size:cover;
             }
         
         </style>
@@ -27,22 +34,24 @@
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Eroe</a>
+          <a class="navbar-brand" href="index.php">Eroe</a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="about.php">About<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="game.html">Game</a>
+                <a class="nav-link" href="game.php">Game</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us!</a>
+                <a class="nav-link" href="contact.php">Contact Us!</a>
               </li>
             </ul>
           </div>
         </nav>
-
+        
+        <div id="border">
+        
         <div id="gameframe">
             <p id="question">Question 1</p>
             <button id="one">Decision 1</button>
@@ -52,19 +61,31 @@
             <button id="restart">Start over</button>
         </div>
         
+<<<<<<< HEAD
         <div> 
             <img src='queen%20_of_sirens.gif'/>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+=======
+        </div>
+>>>>>>> a49bfc5882bc90cf240eb06eaf2ee39554b35c2f
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
         <script type="text/javascript">
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
-            var question = [intro, "question 1", "question 2"];
             
-            $("#question").text(question[0]);
+            var questionOne = "question 1";
+            
+            var questionTwo = "question 2";
+            
+            
+            var question = [intro, questionOne, questionTwo];
+            
+            $("#question").text(question[0] + " " + question[1]);
             
             $("#one").click(function() {
                 
@@ -85,10 +106,6 @@
             });
             
         </script>
-        
-        
-        
-        
         
     </body>
 
