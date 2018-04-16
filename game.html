@@ -79,19 +79,20 @@
         
      <script type="text/javascript">
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
-         
-        
-            var question = [intro, "question 1", "question 2"];
 
             
-            var questionOne = "question 1";
-            
+            var questionOne = "You are Gluteus Maximillius's mother. You stand before the river styx. You have two options.";
             var questionTwo = "question 2";
+         
+            var decisionOne= "You want to bath your baby...";
             
             
             var question = [intro, questionOne, questionTwo];
+            var decisions = [decisionOne];
             
-            $("#question").text(question[0] + " " + question[1]);
+            $("#question").text(question[0] + "\n" + question[1]);
+         
+            $("#one").text(decision[0]);
             
             $("#one").click(function() {
                 
