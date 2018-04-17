@@ -57,20 +57,16 @@
             <p id="question">Question 1</p>
             <button id="one">Decision 1</button>
             <button id="two">Decision 2</button>
-            <div>
-                <img src='queen%20_of_sirens.gif'/>
+            <div id="animation">
+                <img id="ani" src='queen%20_of_sirens.gif'/>
             </div>
             <br>
             <br>
-            <button id="restart">Start over</button>
+            <button id="restart">Return Home</button>
         </div>
         
-
         </div>
 
-        
-        
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -78,29 +74,38 @@
      <script type="text/javascript">
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
 
-            
             var questionOne = "You are Gluteus Maximillius's mother. You stand before the river styx. You have two options.";
-            var questionTwo = "question 2";
+            var questionTwo = "You are about to turn 13, the minimum age requirement to begin military training.";
          
             var decisionOne= "You want to bathe your baby...";
+<<<<<<< HEAD
+=======
+            var decisionTwo= "You do not want to bathe your baby...";
+>>>>>>> 58d9b7eb81281e3925cf781bda8482d8d1589620
             
+            var siren = new Image();
+            siren.src = "queen%20_of_sirens.gif";
             
             var question = [intro, questionOne, questionTwo];
-            var decisions = [decisionOne];
+            var decisions = [decisionOne, decisionTwo];
+            var images = ["spartan_blue.gif"];
             
             $("#question").text(question[0] + "\n" + question[1]);
          
             $("#one").text(decisions[0]);
+            $("#two").text(decisions[1]);
             
             $("#one").click(function() {
                 
                 $("#question").text(question[1]);
+                $("#ani").attr('src',images[0]);
                 
             });
             
             $("#two").click(function() {
                 
                 $("#question").text(question[2]);
+                $("#ani").attr('src',images[0]);
                 
             });
             
