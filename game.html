@@ -17,7 +17,7 @@
             
             #border {
                 background-image: url("https://cdn.pixabay.com/photo/2017/06/10/13/44/white-2389902_960_720.jpg");
-                background-size:cover;
+                background-size: cover;
             }
         
         </style>
@@ -76,32 +76,32 @@
 
             var questionOne = "You are Gluteus Maximillius's mother. You stand before the river styx. You have two options.";
             var questionTwo = "You are about to turn 13, the minimum age requirement to begin military training.";
-         
+            
             var decisionOne= "You want to bathe your baby...";
             var decisionTwo= "You do not want to bathe your baby...";
             
             var siren = new Image();
             siren.src = "queen%20_of_sirens.gif";
             
-            var question = [intro, questionOne, questionTwo];
-            var decisions = [decisionOne, decisionTwo];
+            let masterQuestions = [intro, questionOne, questionTwo];
+            let masterDecisions = [decisionOne, decisionTwo];
             var images = ["spartan_blue.gif"];
             
-            $("#question").text(question[0] + "\n" + question[1]);
-         
-            $("#one").text(decisions[0]);
-            $("#two").text(decisions[1]);
+            $("#question").text(masterQuestions[0] + "\n" + masterQuestions[1]);
+            
+            $("#one").text(masterDecisions[0]);
+            $("#two").text(masterDecisions[1]);
             
             $("#one").click(function() {
                 
-                $("#question").text(question[1]);
+                $("#question").text(masterQuestions[2]);
                 $("#ani").attr('src',images[0]);
                 
             });
             
             $("#two").click(function() {
                 
-                $("#question").text(question[2]);
+                $("#question").text(masterQuestions[2]);
                 $("#ani").attr('src',images[0]);
                 
             });
