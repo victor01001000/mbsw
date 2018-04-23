@@ -54,8 +54,10 @@
         <div id="border">
         
         <div id="gameframe">
-            <p id="question">Question 1</p>
+            <p id="question">Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him.</p>
             <button id="one">Decision 1</button>
+            <br>
+            <br>
             <button id="two">Decision 2</button>
             <div id="animation">
                 <img id="ani" src='baby.gif'/>
@@ -72,13 +74,24 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         
      <script type="text/javascript">
+            var navOne = 0;   
+            var navTwo = 0;
+         
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
 
             var siren = new Image();
             siren.src = "queen%20_of_sirens.gif";
             
-            let masterQuestions = ["You are Gluteus Maximillius's mother. You stand before the river styx. You have two options.", "You are about to turn 13, the minimum age requirement to begin military training.", questionTwo];
-            let masterDecisions = ["You want to bathe your baby...", "You do not want to bathe your baby..."];
+            var masterQuestions = [intro, 
+            "You are Gluteus Maximillius's mother. You stand before the river styx. You have two options.", 
+            "As a child, you were dipped into the river Styx which has made your skin as tough as steel. You are about to turn 13, the minimum age requirement to begin military training. Do you want to begin training?",
+            "You have just turned 13, you have the decision of joining the army or not?", 
+            "question"];
+            var masterDecisions = ["You want to bathe your baby...", 
+            "You do not want to bathe your baby...",
+            "You decide to join the army.", 
+            "Since you're practically invincible, you feel that there is no need to join the army.",
+            "You decide not to join the army."];
             var images = ["spartan_blue.gif"];
             
             $("#question").text(masterQuestions[0] + "\n" + masterQuestions[1]);
@@ -87,21 +100,32 @@
             $("#two").text(masterDecisions[1]);
             
             $("#one").click(function() {
+                navOne = navOne + 1;
                 
-                $("#question").text(masterQuestions[2]);
-                $("#ani").attr('src',images[0]);
+                if (navOne == 1) {
+                    $("#question").text(masterQuestions[2]);
+                    $("#ani").attr('src',images[0]);
+                    $("#one").text(masterDecisions[2]);
+                    $("#two").text(masterDecisions[3]);
+                } 
                 
             });
             
             $("#two").click(function() {
+                navTwo = navTwo + 1; 
                 
-                $("#question").text(masterQuestions[2]);
-                $("#ani").attr('src',images[0]);
+                if (navTwo = 1) {
+                    $("#question").text(masterQuestions[3]);
+                    $("#ani").attr('src',images[0]);
+                    $("#one").text(masterDecisions[2]);
+                    $("#two").text(masterDecisions[4]);
+                }
                 
             });
             
             $("#restart").click(function() {
-                
+                navOne = 0;
+                navTwo = 0;
                 location.href = "index.html";
                 
             });
