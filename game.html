@@ -55,10 +55,10 @@
         
         <div id="gameframe">
             <p id="question">Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him.</p>
-            <button id="one">Decision 1</button>
+            <button id="one">You want to bathe your baby.</button>
             <br>
             <br>
-            <button id="two">Decision 2</button>
+            <button id="two">You do not want to bathe your baby.</button>
             <div id="animation">
                 <img id="ani" src='baby.gif'/>
             </div>
@@ -74,7 +74,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         
      <script type="text/javascript">
-            var navOne = 0;   
+            var navOne = 0;   //nav variables to navigate through masterQuestions array
             var navTwo = 0;
          
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
@@ -123,6 +123,7 @@
             "Ending 2.",
             "Ending 3."];
                                     ];
+
             var images = ["spartan_blue.gif"];
             
             $("#question").text(masterQuestions[0] + "\n" + masterQuestions[1]);
@@ -139,6 +140,13 @@
                     $("#one").text(masterDecisions[2]);
                     $("#two").text(masterDecisions[3]);
                 } 
+                
+                if (navOne == 2) {
+                    $("#question").text(masterQuestions[4]);
+                    $("#ani").attr('src',images[0]);
+                    $("#one").text(masterDecisions[2]);
+                    $("#two").text(masterDecisions[3]);
+                }
                 
             });
             
