@@ -59,6 +59,11 @@
             <br>
             <br>
             <button id="two">You do not want to bathe your baby.</button>
+            <button id="three">Train hard.</button>
+            <button id="four">Slack Off</button>
+            <button id="five">Button 3</button>
+            <button id="six">Button 3</button>
+            <button id="seven">Button 3</button>
             <div id="animation">
                 <img id="ani" src='baby.gif'/>
             </div>
@@ -76,6 +81,8 @@
      <script type="text/javascript">
             var navOne = 0;   //nav variables to navigate through masterQuestions array
             var navTwo = 0;
+         
+            $("#three").hide();
          
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
 
@@ -122,14 +129,8 @@
             "Ending 1.",
             "Ending 2.",
             "Ending 3."];
-                                    ];
 
             var images = ["spartan_blue.gif"];
-            
-            $("#question").text(masterQuestions[0] + "\n" + masterQuestions[1]);
-            
-            $("#one").text(masterDecisions[0]);
-            $("#two").text(masterDecisions[1]);
             
             $("#one").click(function() {
                 navOne = navOne + 1;
@@ -139,6 +140,7 @@
                     $("#ani").attr('src',images[0]);
                     $("#one").text(masterDecisions[2]);
                     $("#two").text(masterDecisions[3]);
+                    navTwo = 1;
                 } 
                 
                 if (navOne == 2) {
@@ -152,13 +154,14 @@
             
             $("#two").click(function() {
                 navTwo = navTwo + 1; 
-                
-                if (navTwo = 1) {
+                $("#two").hide();
+                $("#three").show();
+                /*if (navTwo = 1) {
                     $("#question").text(masterQuestions[3]);
                     $("#ani").attr('src',images[0]);
                     $("#one").text(masterDecisions[2]);
                     $("#two").text(masterDecisions[4]);
-                }
+                }*/
                 
             });
             
@@ -167,7 +170,7 @@
                 navTwo = 0;
                 location.href = "index.html";
                 
-            });
+            }); 
             
         </script>
         
