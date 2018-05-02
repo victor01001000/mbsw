@@ -61,6 +61,7 @@
             <br>
             <br>
             <button id="two">You do not want to bathe your baby.</button>
+
             <button id="four">Slack Off</button>
             
             <button id="six">Do not take the promotion.</button>
@@ -70,6 +71,7 @@
             <button id="ten">Button 3</button>
             <button id="eleven">Button 3</button>
             <button id="twelve">Button 3</button>
+
             <div id="animation">
                 <img id="ani" src='baby.gif'/>
             </div>
@@ -87,7 +89,7 @@
      <script type="text/javascript">
             var navOne = 0;   //nav variables to navigate through masterQuestions array
             var navTwo = 0;
-         
+
             $("#three").hide();
             $("#four").hide();
             $("#five").hide();
@@ -95,6 +97,9 @@
             $("#seven").hide();
          
             var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
+
+            var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
+
 
             var siren = new Image();
             siren.src = "queen%20_of_sirens.gif";
@@ -139,21 +144,46 @@
             "Ending 1.",
             "Ending 2.",
             "Ending 3."];
+                                    ];
 
-            var images = ["spartan_blue.gif"];
+            var images = ["spartan_blue.gif", "baby.gif", "bluesiren.gif", "carnivorou_gorilla.gif", "dog.gif" "godofsmithing.gif", "headonstake.gif", "hobo.gif", "Mist.png", "mom.gif", "pinksiren.gif", "queen_of_sirens.gif", "ship.gif", "shipwreck.gif", "spartan_gold.gif", "spartan_green.gif", "stabbedinthebutt.gif", "tombstone.gif"]
+            
+            $("#question").text(masterQuestions[0] + "\n" + masterQuestions[1]);
+            
+            $("#one").text(masterDecisions[0]);
+            $("#two").text(masterDecisions[1]);
             
             $("#one").click(function() {
                 navOne = navOne + 1;
+
                 $("#question").text(masterQuestions[1]);
                 $("#one").hide();
                 $("#two").hide();
                 $("#three").show();
                 $("#four").show();
                    
+
+                
+                if (navOne == 1) {
+                    $("#question").text(masterQuestions[2]);
+                    $("#ani").attr('src',images[0]);
+                    $("#one").text(masterDecisions[2]);
+                    $("#two").text(masterDecisions[3]);
+                } 
+                
+                if (navOne == 2) {
+                    $("#question").text(masterQuestions[4]);
+                    $("#ani").attr('src',images[0]);
+                    $("#one").text(masterDecisions[2]);
+                    $("#two").text(masterDecisions[3]);
+                }
+                
+
             });
             
             $("#two").click(function() {
                 navTwo = navTwo + 1; 
+
                 $("#two").hide();
                 $("#one").hide();
                 $("#question").text(masterQuestions[11]);
@@ -191,6 +221,15 @@
                 $("#four").hide();
                 $("#five").show();
                 $("#six").show();
+
+                
+                if (navTwo = 1) {
+                    $("#question").text(masterQuestions[3]);
+                    $("#ani").attr('src',images[0]);
+                    $("#one").text(masterDecisions[2]);
+                    $("#two").text(masterDecisions[4]);
+                }
+
                 
             });
             
@@ -199,7 +238,7 @@
                 navTwo = 0;
                 location.href = "index.html";
                 
-            }); 
+            });
             
         </script>
         
