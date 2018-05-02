@@ -54,11 +54,24 @@
         <div id="border">
         
         <div id="gameframe">
-            <p id="question">Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him.</p>
+            <p id="question">Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him.</p>
             <button id="one">You want to bathe your baby.</button>
+            <button id="three">Train hard.</button>
+            <button id="five">Take the promotion.</button>
             <br>
             <br>
             <button id="two">You do not want to bathe your baby.</button>
+
+            <button id="four">Slack Off</button>
+            
+            <button id="six">Do not take the promotion.</button>
+            <button id="seven">Button 3</button>
+            <button id="eight">Button 3</button>
+            <button id="nine">Button 3</button>
+            <button id="ten">Button 3</button>
+            <button id="eleven">Button 3</button>
+            <button id="twelve">Button 3</button>
+
             <div id="animation">
                 <img id="ani" src='baby.gif'/>
             </div>
@@ -76,14 +89,22 @@
      <script type="text/javascript">
             var navOne = 0;   //nav variables to navigate through masterQuestions array
             var navTwo = 0;
-         
-            var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. \n It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
 
-            var siren = new Image();
-            siren.src = "queen%20_of_sirens.gif";
+            $("#three").hide();
+            $("#four").hide();
+            $("#five").hide();
+            $("#six").hide();
+            $("#seven").hide();
+            $("#eight").hide();
+            $("#nine").hide();
+            $("#ten").hide();
+            $("#eleven").hide();
+            $("#twelve").hide();
+         
+            var intro = "Sing to me muses the story of black tragedy, The soul is unbreakable, but the flesh is not, for no one can escape the wrath of the green-eyed goddess, Despair forever etched in his heart. His name becomes immortal. It was a bright morning when Gluteus Maximilius entered the world half immortal and half man. Alone at birth, a life of glory would await him."; 
             
             var masterQuestions = [intro,
-            "Mother bathes Maximillius in ambrosia nectar everyday and he becomes sturdier than titanium. All that remained soft was his birthmark on his butt, that served as a reminder that his father was a god. Rival country wages war on his counry's vast resources, so Maximillius' country calls on all the young men to fight. Maximillius wants to prove that he is stronger han his father and enists in the army.",
+            "Mother bathes Maximillius in ambrosia nectar everyday and he becomes sturdier than titanium. All that remained soft was his birthmark on his butt, that served as a reminder that his father was a god. Rival country wages war on his counry's vast resources, so Maximillius' country calls on all the young men to fight. Maximillius wants to prove that he is stronger han his father and enlists in the army.",
             "Maximillius trains hard and gets very proficient with the sword, bow and arrow. His commands are precise and the strategies he comes up with are witty and flexible. He is at the top of his game. An officier notices how hard he is working and offers him a promotion to be a commander of a fleet of ships.", 
             "Maximillius ends up commanding a fleet of 30 ships. After seeing how he is succeding, the God of smithing grants Maximillius a sturdy armor and weapons, so that he will be able to prevail in war. Within a month, he sets out toward the ocean to fight for his country, but after a couple of days, Maximillius becomes lost and sees 2 routes.",
             "After getting out of the mist, one of Maximillius ship gets led astray by the sound of a lullaby. one of the crewman mentions the sirens' myth and Maximillius realizes that the myth is real. Maximillus tells his other ships to go ahead to give supples and pride reinforcements for the war, while his own ship goes after the ship that was led astray. He sees an isalnd that the ship goes to.", 
@@ -105,7 +126,7 @@
                                   ];
             var masterDecisions = ["You want to bathe your baby...", 
             "You do not want to bathe your baby...",
-            "Train hard.", 
+            "Enlist in the army and train hard.", 
             "Slack off.",
             "Take the promotion.",
             "Not take the promotion.",
@@ -122,43 +143,62 @@
             "Ending 1.",
             "Ending 2.",
             "Ending 3."];
-                                    ];
 
-            var images = ["spartan_blue.gif", "baby.gif", "bluesiren.gif", "carnivorou_gorilla.gif", "dog.gif" "godofsmithing.gif", "headonstake.gif", "hobo.gif", "Mist.png", "mom.gif", "pinksiren.gif", "queen_of_sirens.gif", "ship.gif", "shipwreck.gif", "spartan_gold.gif", "spartan_green.gif", "stabbedinthebutt.gif", "tombstone.gif"]
+            var images = ["spartan_blue.gif", "baby.gif", "bluesiren.gif", "carnivorou_gorilla.gif", "dog.gif", "godofsmithing.gif", "headonstake.gif", "hobo.gif", "Mist.png", "mom.gif", "pinksiren.gif", "queen_of_sirens.gif", "ship.gif", "shipwreck.gif", "spartan_gold.gif", "spartan_green.gif", "stabbedinthebutt.gif", "tombstone.gif"]
             
-            $("#question").text(masterQuestions[0] + "\n" + masterQuestions[1]);
-            
-            $("#one").text(masterDecisions[0]);
-            $("#two").text(masterDecisions[1]);
             
             $("#one").click(function() {
                 navOne = navOne + 1;
-                
-                if (navOne == 1) {
-                    $("#question").text(masterQuestions[2]);
-                    $("#ani").attr('src',images[0]);
-                    $("#one").text(masterDecisions[2]);
-                    $("#two").text(masterDecisions[3]);
-                } 
-                
-                if (navOne == 2) {
-                    $("#question").text(masterQuestions[4]);
-                    $("#ani").attr('src',images[0]);
-                    $("#one").text(masterDecisions[2]);
-                    $("#two").text(masterDecisions[3]);
-                }
-                
+
+                $("#question").text(masterQuestions[1]);
+                $("#one").hide();
+                $("#two").hide();
+                $("#three").show();
+                $("#four").show();
+                   
             });
             
             $("#two").click(function() {
                 navTwo = navTwo + 1; 
+
+                $("#two").hide();
+                $("#one").hide();
+                $("#question").text(masterQuestions[11]);
                 
-                if (navTwo = 1) {
-                    $("#question").text(masterQuestions[3]);
-                    $("#ani").attr('src',images[0]);
-                    $("#one").text(masterDecisions[2]);
-                    $("#two").text(masterDecisions[4]);
-                }
+            });
+         
+            $("#three").click(function() {
+                $("#question").text(masterQuestions[2]);
+                $("#three").hide();
+                $("#four").hide();
+                $("#five").show();
+                $("#six").show();
+                
+            });
+         
+            $("#four").click(function() {
+                $("#question").text(masterQuestions[12]);
+                $("#three").hide();
+                $("#four").hide();
+                
+            });
+         
+            $("#five").click(function() {
+                $("#question").text(masterQuestions[2]);
+                $("#three").hide();
+                $("#four").hide();
+                $("#five").show();
+                $("#six").show();
+                
+            });
+         
+            $("#six").click(function() {
+                $("#question").text(masterQuestions[2]);
+                $("#three").hide();
+                $("#four").hide();
+                $("#five").show();
+                $("#six").show();
+
                 
             });
             
