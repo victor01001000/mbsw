@@ -1,0 +1,84 @@
+var intro = “It is January 1942. The US is calling its young men to volunteer for the armed forces to combat the evil abroad. You are a young 17 year old man named Robert Smith who lives in the quiet town of Mobile, Alabama. Tomorrow is your birthday and you’ll be eligible to volunteer. Do you want to volunteer or abstain from warfare.l”; 
+            
+            var masterQuestions = [intro,
+            “You have decided to volunteer. The question now is which branch to join. There are two options available for you: the Marines or the Airborne.”, 
+            “Despite not volunteering, you are drafted to join the marines.”, 
+            “You’ve decided to join the Airborne. You are sent to Georgia for bootcamp. You are soon assigned the 101st airborne. During Bootcamp, we become close friends with three men: Adam Johnson, Mark Perconte, and David Goldberg. During a 10 mile run David injures his leg. You know that the last ten men to finish the run will have their weekend passes revoked. Do you choose to stay behind and assist him or run ahead to avoid the punishment?”
+	“You decide to help David and your bond grows strong.”,
+	“You decided to leave David behind, but David doesn’t hold any hard feelings toward you.”
+	“After bootcamp you are sent to New York where you board a ship to Great Britain. Get ready, you’re invading Normandy. It is June 5th, 1944. You have boarded the plane and flying over the English Channel. Your target are some 88s behind Omaha beach. You are dropped into an area surrounded by trees and you have no idea where you are. You hear footsteps coming speaking in a foreign language. Do you want to shoot the man or wait until you can see him?”,
+	“You decide to wait, soon a man in civilian clothes comes into sight followed by two other US soldiers. You run out to join them. Turns out the man is a member of the French resistance. He leads you to a rendezvous point where you find Adam, Mark, and David. Your lieutenant gives you orders to go on a mission to destroy 4 heavy 88s that pose a threat to the soldiers on Omaha beach.”
+	“You decide to shoot. You suddenly hear two more voices swearing in English and they begin firing at your direction. It turns out you have just shot a member of the French resistance. You are shot in leg and crippled. You are sent back to England and discharged soon after.”
+	“Your squad has located the 88s in an area surrounded by bushes and trees. It is time for a surprise attack.”
+	“You have successfully destroyed the 88s and it is now time to regroup with the rest of the company. You are soon deployed to take a town that is strategically important to the Germans. On your way, you are suddenly ambushed by Germans. David is captured by the Germans. Your lieutenant orders the troops to fall back. Do you want to chase after David or retreat.”
+	“You run to save David, but end being captured yourself.”
+	“You decide to fall back as it would be impossible to save David.”
+	“It is now December 1944. Your company has been deployed inside the Ardenne forests to hold the line against a potential German offensive. One day while sitting in your foxhole with Adam, the sudden sound of heavy guns firing could be heard. The Germans are firing on your company. After the bombing stops, you hear a cry for help. You look up and see Mark out on the ground about 20 feet away with his leg blown in half. The bombing soon continues. Do you want to run out and pull Mark to safety or wait out the bombing hoping Mark will survive?”
+	“You decide to run out and David follows. Both you are able to pull Mark to safety without being killed yourselves.”
+	“You decide to stay in your foxhole and a shell soon hits Mark ending his suffering.”
+	“After surviving the Battle of the Bulge, the company is marching closer and closer to Berlin. While walking in the forest leading a patrol squad, a nasty stench catches your nose. The others ask if you want to follow it. Do you want to follow it?”
+	“After following the trail, you soon reach a camp surrounded by barbed wire fences. As you get closer you see hundreds of men in prison uniforms. You have just arrived at the Buchenwald concentration camp. Your patrol mates quickly open the gate and let the prisoners out. As the prisoners walk out of the camp, you see a familiar face. It’s David, though he is now more bone than flesh. You finally truly understood why this war had to be fought.” 
+	“You choose not to follow the trail, but soon hear of the horrors. You reach the camp only to see the corpse of David being carried away.”
+	“Within the next few months, you march through Germany and reach Berlin. By August, you hear of the atomic bombings, the war has finally ended. You return home.”
+	“The guilt of allowing a friend to die does not allow you to sleep. The anguish soon becomes too much for you and you decide to end your life one year after returning home.”
+	“For your heroic actions committed during the war, you are awarded the medal of honor.”,
+	“You’ve decided to join the Marines. You are sent to San Diego for bootcamp. During bootcamp.”
+	“You have been assigned to the Marine Corp. You are sent to San Diego for bootcamp. During bootcamp.”
+	“After bootcamp, you are shipped out from San Diego for the Pacific theater of war. You soon arrive at Peleliu. As you rush onto the beach, you are pinned down by artillery and gunfire. You find shelter behind a damaged tank. Your lieutenant yells at you to push forward and get off the beach. Do you want to stay behind the tank or crawl forward?”,
+	“You decide to stay on the beach and you are stuck by an artillery shell.”,
+	“You crawl up the beach and join up with your platoon. As your platoon moves forward, you reach a field full of Japanese fortifications. Your partner Bill Richards tells you hears a noise from a nearby bunker. Do you want to check it out or ignore it?”,
+	“You decide to ignore it. As you walk away you hear gunfire in the back as another platoon gets assaulted by 4 Japanese soldiers. Although the ambush was stopped, three Americans were wounded.”,
+	“You decide to check it out. As you reach the entrance of the bunker, you hear small whispers. You throw a grenade inside and the voices disappear.”
+	“It has been three days since you have landed in Peleliu. You have not been able to drink any water for the past day and the Navy has been unable to load much supplies onto through the beaches. You’re walking around and suddenly see a small pond. Bill warns you it might be poisoned. Do you want to drink from it?”,
+	“You drink the water and fortunately you do not feel sick. The next day your squad is sent to scout an area and you have to cross a ridge. On your way, Japanese machine gunfire opens up on the squad. You narrowly escape.”,
+	“You decide not to drink the water. The next day your squad is sent to scout an area and you have to cross a ridge. On your way, Japanese machine gunfire opens up on the squad.  Due to your fatigue, you do not move fast enough and a bullet catches you in the neck ending your life.”
+	“You look back and see a soldier still alive bleeding to his death. Do you want to risk your life to save him?”
+	“You run out and throw a smoke grenade to cover yourself and run out with two others to carry the injured soldiers. As you reach the end, you are shot. Once you’ve reached safety you discover that you were missing two fingers and the injured soldier dead.”
+	“You decide to leave the soldier there and fall back to home base.”
+	“The campaign at Peleliu was a brutal one, but you are now preparing to invade Okinawa a stepping stone to the Japanese mainland defended by over a hundred thousand troops. As you are deployed onto the beach, you find little resistance. As you move deeper into the island, you soon enter an area surrounded by ridges. The Japanese begin their assault.” 
+	“You were able to survive against the Shuri line. You are relieved by a different division. After a week of rest you are sent to fight again. As your platoon is walking to its destination, you see a line of civilians being evacuated. Suddenly, shots are opened on your platoon. You duck and take cover. You look up and see more civilians coming down with Japanese soldiers behind them picking off American soldiers. You can’t stop the Japanese soldiers without killing some of the Okinawans. Do you want to shoot or do nothing?”
+	“You shoot and are able to get the some of the snipers with a few other soldiers killing the rest. Unfortunately, multiple civilians were sacrificed including children. You begin to lose all hope of morality in war. A few days later on top of a hill, you see a small group of Japanese leading a Banzai charge. You begin shooting at them until a new officer, Lieutenant Dalton, comes to tell you to stop. Do you want to ignore the officer and continue shooting or punch your officer in the face.” 
+	“You choose not to shoot, but other soldiers shot their weapons killing multiple civilians. As you look at the carnage, you see young children with their eyes wide open. You can not help but shed a tear for the horror you have just witnessed.”,
+	“You continue shooting until all the Japanese soldiers are killed while laughing through the whole thing. Lieutenant Dalton takes down your name and you are soon sent into a mental facility away from the island. You later return home living in an asylum.”
+	“You punch the Dalton in the face asking him why you can’t kill the men who have killed so much of your comrades. He stares at you for a second and reminds you that you fight to protect, not to kill. He pats you on the shoulder, tells you to get some rest and walks away.
+	“A few days later while trying to clear out a cave of Japanese snipers. You are shot in the leg. Lieutenant Dalton comes rushing to save you along with two others. As they carry you on the stretcher, Dalton is struck by a sniper and falls. Do you want to grab his arm and drag him to safety along with you or do nothing so that you may be dragged to a medic sooner?”
+	“You decide to save Dalton along with you.”
+	“You leave Dalton there and he is soon shot again and dies.”
+	“A few days later while trying to clear out a cave of Japanese snipers. You are shot in the leg. A medic comes rushing past all the enemy fire to save. You wraps you up and three other men assist him carrying you back to safety. This action restores your faith in the compassion of humankind.”	
+	“After Okinawa, you soon hear news of the atomic bombs. The war was finally over. You spend a few months helping clean up the post-war rubble before returning home. Through the rest of your life, you were never quite able to forget the horrors you have witnessed. The nightmares became too difficult for you to handle and you commit suicide.”
+	“After Okinawa, you soon hear news of the atomic bombs. The war was finally over. You spend a few months helping clean up the post-war rubble before returning home. Through the rest of your life, you were never quite able to forget the horrors you have witnessed, yet the bravery of the men and the bonds you formed give you hope that the war had some good in it.”]
+	 
+
+          
+      
+            var masterDecisions = [
+	“Next”,
+	“You choose to volunteer to join the armed forces”,
+	“You choose not to volunteer.”,
+	“The Airborne”,
+	“The Marines”,
+	“Help David finish the run.”,
+	“Continue running forward.”,
+	“Shoot”,
+	“Hold Fire”,
+	“Rescue David”,
+	“Retreat”,
+	“Save Mark”,
+	“Stay in foxhole”,
+	“Follow Trail”,
+	“Continue Patrol”,
+	“Stay Behind Tank”,
+	“Crawl Forward”,
+	“Ignore it”
+	“Check it out”
+	“Drink the water.”
+	“Walk away.”
+	“Save the soldier.”
+	“Continue On.”
+	“Shoot”,
+	“Do nothing”,
+	“Continue shooting”,
+	“Punch lieutenant”,
+	“Try to save Dalton”,
+	“Do nothing”
+	]
